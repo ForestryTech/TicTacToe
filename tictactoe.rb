@@ -10,7 +10,7 @@ class Game
     end
     
     def play
-        rnd = Random.new(2)
+        rnd = Random.new
         round ||= rnd.rand(1..2)
         a_winner = {}
         end_game = true
@@ -33,6 +33,7 @@ class Game
                 if v 
                     puts "#{k} is the winner!"
                     end_game = false
+                    draw_game
                 else    
                     puts "No winner yet...."
                 end
